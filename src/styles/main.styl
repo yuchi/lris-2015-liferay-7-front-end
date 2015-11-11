@@ -4,5 +4,89 @@
 // Import CSS from "node_modules" and "bower_components"
 // thanks to Stylus' "import css" and "paths" options
 
+@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic");
+
 @import 'prism/themes/prism-okaidia.css'
 // Check out "bower_components/prism/themes/" for available themes
+
+.bespoke-parent
+  background: #363537
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: 300
+
+mark
+  background: yellow
+  color: #222
+  position: relative
+
+  > span
+    position: relative
+    z-index: 1
+
+h3 mark
+  margin-left: 0.5ex
+  margin-right: 0.5ex
+
+  &::before
+  &::after
+    content: ''
+    position: absolute
+    top: 0px
+    bottom: 0px
+    width: 1ex
+    background: yellow
+
+  &::before
+    left: 0px
+    transform: skewX(-10deg) translateX(-0.5ex)
+
+  &::after
+    right: 0px
+    transform: skewX(-10deg) translateX(0.5ex)
+
+
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 100
+
+backdrop(img, ext)
+  .bespoke-backdrop.{img}
+    background-image: url('/images/backdrop-' + img + '.' + ext)
+    background-size: cover
+    {block}
+
+    &.repeat
+      background-size: 60% auto
+      background-position: 50% 50%
+      background-repeat: repeat
+
+    &.low
+      background-position: 50% 80%
+
+backdrop(elysees, jpg)
+
+backdrop(bnf, jpg)
+
+backdrop(frameworks, png)
+
+backdrop(hungary-sustainable-design, jpg)
+
+backdrop(hungary-developed-identity, jpg)
+
++backdrop(spiderman, jpg)
+  filter: brightness(0.6)
+
+.bespoke-backdrop.todo
+  background-color: yellow
+
+.backdrop-info
+  font-size: 10px
+  position: absolute
+  right: 0px
+  bottom: 4vmin
+
+  p
+    background: #363537
+    padding: 0.8em 1.2em
+    margin: 0.2em 0 0
+    text-align: left
