@@ -29,6 +29,20 @@ bespoke.from('article', [
         bullets[bullets.length - 1].classList.add('bespoke-bullet-last-of-slide');
       }
     });
+  },
+  function (deck) {
+    var last = Date.now();
+
+    window.document.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      if (Math.abs(last - Date.now()) < 300) {
+        return;
+      }
+
+      last = Date.now();
+      deck.next();
+    });
   }
 ]);
 
