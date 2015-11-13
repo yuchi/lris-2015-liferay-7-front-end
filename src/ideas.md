@@ -7,3 +7,9 @@ In place
 - creazione di Metal.js
 - extension points di OSGi
 - modalità di esposizione di moduli
+
+
+Scaletta
+
+- front-end development
+- difficile

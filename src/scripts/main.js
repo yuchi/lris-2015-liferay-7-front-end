@@ -9,16 +9,27 @@ var bespoke = require('bespoke'),
   hash = require('bespoke-hash'),
   progress = require('bespoke-progress');
 
+var BULLETS = 'li:not(.no-bullet), .bullet';
+
 // Bespoke.js
 bespoke.from('article', [
   nebula(),
   keys(),
   touch(),
-  bullets('li:not(.no-bullet), .bullet'),
+  bullets(BULLETS),
   backdrop(),
   scale(),
   hash(),
-  progress()
+  progress(),
+  function (deck) {
+    deck.slides.forEach(function (slide) {
+      var bullets = slide.querySelectorAll(BULLETS);
+
+      if (bullets.length) {
+        bullets[bullets.length - 1].classList.add('bespoke-bullet-last-of-slide');
+      }
+    });
+  }
 ]);
 
 // Prism syntax highlighting

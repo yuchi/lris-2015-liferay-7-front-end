@@ -14,7 +14,7 @@ html
       section
         h3 Liferay 7
         h1 Front-end development
-        p Pier Paolo Ramon
+        h4 Pier Paolo Ramon
         p: small Twitter #[strong @_pier]
         p: small GitHub #[strong @yuchi]
 
@@ -83,18 +83,375 @@ html
           li.no-bullet SASS (SCSS)
           li.no-bullet &#8230;
 
-      section(data-bespoke-backdrop="spiderman")
-        h3 da grandi poteri&#8230;
-        .backdrop-info
-          p Spiderman
-          p &copy; Marvel
-
       section
         h3 I buoni
         h1 propositi
         h3 di Liferay 7
 
-      section(data-bespoke-backdrop="frameworks repeat")
+      section(data-bespoke-backdrop="flower")
+        h3 Buon proposito №1
+        h1 Temi
+        .backdrop-info
+          p «Fioritura»
+          p © #[strong Davide Abbatiello], Full-stack Engineer
+
+      section: .disclaimer
+        h3 Disclaimer
+        p Non-mandatory content ahead
+
+      section
+        h2 Developer Friction
+        ul
+          li(hidden)
+          li #[strong Time-to-deploy] per i temi non in linea con le altre piattaforme
+          li #[strong Build system] non pensati per il front-end
+          li Troppo poco #[strong controllo] sulla #[strong pipeline]
+
+      section
+        h2 Nuovi tool
+
+      section(data-bespoke-backdrop="gulp full")
+
+      section
+        h2 Gulp
+        ul
+          li(hidden)
+          li Un #[em Build System] come Ant, Maven o Gradle
+          li Molto, molto veloce
+          li #[em Watch–ability oriented]
+
+      section(data-bespoke-backdrop="yeoman full")
+
+      section
+        h2 Yeoman
+        p (<code>yo</code>)
+        ul
+          li(hidden)
+          li Un generatore di codice
+          li Un #[em Kickstart System]
+
+      section(data-bespoke-backdrop="themelets full")
+        .backdrop-info
+          p Logo temporaneo
+          p &copy; Creative Stall
+
+      section
+        h2 Themelets #[span.announcement]
+        ul
+          li(hidden)
+          li Porzioni di tema
+          li #[del Estensione] Composizione
+          li Distribuite attraverso #[strong npm]
+
+      section
+        p.themelet
+          span.file FTL
+          span.file JS
+          span.file CSS
+        h2 ⬇︎
+        p theme
+
+      section
+        h2 In sintesi
+
+      section
+        h4 Crea un tema
+        pre: code yo liferay-theme
+        .old
+          p: code ./create.sh ...
+
+      section
+        h4 Importa (!!) un tema
+        pre: code yo liferay-theme:import
+
+      section
+        h4 Crea una nuova Themelet
+        pre: code yo liferay-theme:themelet
+
+      section
+        h4 Esegui la build
+        pre: code gulp build
+        .old
+          p: code ant war
+          hr
+          p: code mvn clean install
+
+      section
+        h4 Esegui build in tempo reale #[span.announcement]
+        pre: code gulp watch
+
+      section
+        h4 Liferay 7
+        h2 — e —
+        h4 Liferay 6.2
+
+      section(data-bespoke-backdrop="fireworks")
+        h3 Buon proposito №2
+        h1 Dependencies
+        .backdrop-info
+          p «Light Painting Evolution»
+          p © #[strong Davide Abbatiello], Full-stack Engineer
+
+      section: .disclaimer
+        h3 Disclaimer
+        p Very much in progress
+
+      section
+        h2 #[strong YUI] Loader
+        ul
+          li(hidden)
+          li YUI Gallery
+          li pre-AMD-era
+          li pre-CommonJS-era
+          li: strong Deprecato…
+
+      section
+        h2 Liferay<br>#[strong Module Loader]#[span.announcement]
+        .refs: p: a(href="https://github.com/liferay/liferay-amd-loader") github.com/liferay/liferay-amd-loader
+        ul
+          li(hidden)
+          li AMD (Asynchronous Module Definition)
+          li Supporto per combo-loading
+          li HTTP2-oriented
+
+      section
+        h2 OSGi#[span.announcement]
+        p I #[em bundles] sono anche dei #[em module providers]
+        pre: code.language-properties.
+          Bundle-Name: Metal Web
+          Bundle-SymbolicName: …
+          Bundle-Version: 1.0.0
+          Include-Resource: bower.json
+          JS-Submodules: true
+
+      section(data-bespoke-backdrop="fountain")
+        h3 Buon proposito №3
+        h1 Modularity
+        .backdrop-info
+          p Fontane, Nizza
+          p © #[strong Davide Abbatiello], Full-stack Engineer
+
+      section
+        h4 Software architecture
+        p.
+          Monolithic<br>
+          ⬇︎<br>
+          Extendible<br>
+          ⬇︎<br>
+          #[strong Modular]
+
+      section
+        h4 Java Development
+        p.
+          Edit/restart<br>
+          ⬇︎<br>
+          (Hot) Plugins<br>
+          ⬇︎<br>
+          #[strong OSGi Bundles]
+
+      section
+        h4 Contracts
+        p.
+          Source<br>
+          ⬇︎<br>
+          API surface<br>
+          ⬇︎<br>
+          #[strong Everything]
+
+      section
+        h4 Examples on F/E
+        p.
+          Navigation Interaction#[span.liferay-6]#[br]
+          ⬇︎<br>
+          Alloy Editor#[span.liferay-6]#[br]
+          ⬇︎<br>
+          #[strong Map Provider]#[span.liferay-7]
+
+      section.keep
+        p Asset Publisher
+        .contract
+          p Map Provider
+          .contract.impl
+            p Google Maps
+            .contract
+              p Map Provider Plugins
+              .contract.impl: p Route Plugin
+              .contract.impl: p PoI Plugin
+              .contract.impl: p ···
+
+      section.keep
+        p Asset Publisher
+        .contract
+          p Map Provider
+          .contract.impl
+            p Google Maps
+            .contract
+              p Map Provider Plugins
+              .contract.impl: p Route Plugin
+              .contract.impl: p PoI Plugin
+              .contract.impl.alt: p Area Plugin
+
+      section.keep
+        p Asset Publisher
+        .contract
+          p Map Provider
+          .contract.impl.alt2
+            p Open Street Maps
+            .contract
+              p Map Provider Plugins
+              .contract.impl: p Route Plugin
+              .contract.impl: p PoI Plugin
+              .contract.impl.alt: p Area Plugin
+      
+      section.keep
+        p Asset Publisher
+        .contract
+          p Map Provider
+          .contract.impl.alt2
+            p Open Street Maps
+            .contract
+              p Map Provider Plugins
+              .contract.impl.del: p Route Plugin
+              .contract.impl: p PoI Plugin
+              .contract.impl.alt: p Area Plugin
+
+      section.keep.last-keep
+        p Asset Publisher
+        .contract
+          p Map Provider
+          .contract.impl.alt2
+            p Open Street Maps
+            .contract
+              p Map Provider Plugins
+              .contract.impl.alt2: p Alternative Plugin
+              .contract.impl: p PoI Plugin
+              .contract.impl.alt: p Area Plugin
+
+      //section.keep
+        p Blogs Entry
+        .contract
+          p Social Share Intents
+          .contract.impl: p Facebook
+          .contract.impl: p Twitter
+          .contract.hide: p ···
+
+      //section.keep.last-keep
+        p Blogs Entry
+        .contract
+          p Social Share Intents
+          .contract.impl: p Facebook
+          .contract.impl: p Twitter
+          .contract.impl.alt: p LinkedIn
+
+      section
+        h4 Design-time Dependencies
+        h2 VS
+        h4 Runtime Modularity
+
+      //section
+        p My Consumer
+        .contract.impl
+          p My Module
+          .contract
+            .contract.impl: p My Module Plugin
+            .contract.impl: p ···
+
+      //section
+        pre: code.language-javascript.
+          {
+            name: 'my-consumer',
+            dependencies: {
+              'my-module': '*',
+              'my-module-plugin': '*'
+            }
+          }
+
+      //section
+        pre: code.language-javascript.
+          {
+            name: 'my-module',
+            version: '1.0.0'
+          }
+
+      //section
+        pre: code.language-javascript.
+          {
+            name: 'my-module-plugin',
+            peerDependencies: {
+              'my-module': '1.x'
+            }
+          }
+
+      //section
+        h4 Risoluzione ‘alla Node’
+        ul
+          li.no-bullet
+            span #[code "consumer"] dipende da
+            ul
+              li.no-bullet
+                span #[code "my-module"]
+              li.no-bullet
+                span #[code "my-module-plugin"]
+
+      section(data-bespoke-backdrop="eurofighter")
+        h3 Buon proposito №4
+        h1 ES2015
+        .backdrop-info
+          p Eurofighter Typhoon Airshow, Parma, 2013
+          p © #[strong Davide Abbatiello], Full-stack Engineer
+
+      section
+        h4 Build-time compiling
+        ul
+          li(hidden)
+          li Utilizzeremo Babel.js
+          li Supporto per le SourceMaps
+
+      section(data-bespoke-backdrop="babel full")
+
+      section
+        h4 Il che significa…
+        ul
+          li(hidden)
+          li Node.js dietro le quinte
+          li E quindi possiamo usare…
+            ul
+              li ES2016!
+              li CoffeeScript!
+              li TypeScript!
+              li Flow!!
+
+      section
+        h2 Enterprise
+        ul
+          li Jenkins? CI? CD?
+          li Node in produzione?
+          li Impatto dev environment
+
+      section
+        h2 Liferay
+        p: img(src="/images/red-heart.png",width="64",height="64")
+        h2 Front-end
+
+      section
+        p: em fin
+        .old
+          h4 Crediti
+          p.
+            Mirco Danieli<br>
+            Paolo Valeri<br>
+            Davide Abbatiello
+
+      section
+        h3 Liferay 7 — Front-end Development
+        hr
+        h2 Q&amp;A
+        hr
+        h4 Pier Paolo Ramon
+        p: small Twitter #[strong @_pier]
+        p: small GitHub #[strong @yuchi]
+
+      //section(data-bespoke-backdrop="frameworks repeat")
         h2 I. Frameworks
 
     script(src='build/build.js')

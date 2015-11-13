@@ -9,8 +9,10 @@
 @import 'prism/themes/prism-okaidia.css'
 // Check out "bower_components/prism/themes/" for available themes
 
+bg = #363537
+
 .bespoke-parent
-  background: #363537
+  background: bg
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-weight: 300
 
@@ -73,11 +75,27 @@ backdrop(hungary-sustainable-design, jpg)
 
 backdrop(hungary-developed-identity, jpg)
 
-+backdrop(spiderman, jpg)
-  filter: brightness(0.6)
+backdrop(flower, jpg)
+
+backdrop(gulp, png)
+
+backdrop(yeoman, png)
+
+backdrop(themelets, png)
+
+backdrop(fireworks, jpg)
+
+backdrop(babel, png)
+
+backdrop(eurofighter, jpg)
+
+backdrop(fountain, jpg)
 
 .bespoke-backdrop.todo
   background-color: yellow
+
+.bespoke-backdrop.full.bespoke-backdrop-active
+  opacity: 1
 
 .backdrop-info
   font-size: 10px
@@ -90,3 +108,140 @@ backdrop(hungary-developed-identity, jpg)
     padding: 0.8em 1.2em
     margin: 0.2em 0 0
     text-align: left
+
+.bespoke-slide.keep.bespoke-after:not(.last-keep)
+  transition-delay: 1s
+
+.bespoke-slide.keep + .bespoke-slide.keep.bespoke-active
+  transition-delay: 0s
+
+.announcement
+.liferay-6
+.liferay-7
+  position: relative
+  display: inline-block
+  height: 1em
+
+  &::after
+    content: 'New!!'
+    font-size: 1rem
+    line-height: 1
+    letter-spacing: 0px
+    position: absolute
+    display: block
+    padding: 0.2ex 0.5ex
+    background: red
+    color: white
+    bottom: 120%
+    right: 1ex
+    transform: skewY(10deg)
+
+.liferay-6::after
+.liferay-7::after
+  bottom: 0%
+  right: auto
+  left: 1ex
+  transform: skewY(-10deg)
+
+.liferay-6::after
+  content: '6'
+  background: #777
+
+.liferay-7::after
+  content: '7'
+  background: teal
+
+.bespoke-bullet-last-of-slide::after
+  content: ' ⇥'
+  color: rgba(0,0,0,0.3)
+  float: right
+  width: 0px
+  position: relative
+  left: 1ex
+
+.old
+  margin-top: 1em
+  padding: 1em
+  font-size: 0.6em
+  background: rgba(0,0,0,0.2)
+
+.themelet
+  position: relative
+  top: -24px
+  left: -10px
+  border: 1px solid
+  padding: 1ex
+  box-shadow:\
+    10px 10px 1px -1px bg, 10px 10px 1px 0px rgba(white, 0.8), \
+    20px 20px 4px -1px bg, 20px 20px 4px 0px rgba(white, 0.5)
+
+.disclaimer
+  color: gold
+  border-top: 3px double
+  border-bottom: 3px double
+  border-radius: 1em
+
+  > :last-child
+    margin-bottom: 20px
+
+.contract
+  border: 2px solid
+  padding: 0.2em
+  margin: 0.2em
+  background: bg
+  color: white
+  border-radius: 4px
+
+  &.impl
+    border-color: teal
+    background: rgba(teal, 0.2)
+    color: rgba(white, 0.8)
+
+  &.impl.alt
+    border-color: gold
+    background: rgba(gold, 0.2)
+    color: rgba(white, 0.8)
+
+  &.impl.alt2
+    border-color: orange
+    background: rgba(orange, 0.2)
+    color: rgba(white, 0.8)
+
+  &.impl.del
+    border-color: #f02
+    background: rgba(#f02, 0.2)
+    color: rgba(white, 0.5)
+    opacity: 0.4
+
+  &.hide
+    visibility: hidden
+
+.refs
+  margin-top: 0.2em
+  margin-bottom: 0.5em
+
+  &:last-child
+    margin-bottom: 0
+
+.file
+  display: inline-block
+  padding: 3ex 0ex
+  border: 2px solid
+  width: 6ex
+  position: relative
+
+  &::before
+    content: '.'
+
+  &::after
+    content: ''
+    position: absolute
+    top: -2px
+    right: -2px
+    border-style: solid
+    border-width: 10px
+    border-top-color: bg
+    border-right-color: bg
+
+  + .file
+    margin-left: 1ex
