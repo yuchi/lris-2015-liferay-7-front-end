@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Liferay 7 Front-end development</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h3>Liferay 7</h3>
+        <h1>Front-end<br>development</h1>
+        <h4>Pier Paolo Ramon</h4>
+        <p><small>Twitter <strong>@_pier</strong></small></p>
+        <p><small>GitHub <strong>@yuchi</strong></small></p>
+      </section>
+      <section>
+        <h2>In this package</h2>
+        <ul>
+          <li hidden></li>
+          <li><strong>Making Liferay A Place for Modern Web Developers</strong> di C. Balsas</li>
+          <li><strong>Building Themes in Liferay 7</strong> di N. Cavanaugh</li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li hidden></li>
+          <li>La direzione intrapresa</li>
+          <li>I cambiamenti che affronteremo</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Perchè?</h2>
+      </section>
+      <section data-bespoke-backdrop="bnf">
+        <h3>davanti a voi un nuovo progetto</h3>
+        <div class="backdrop-info">
+          <p>La "BnF - Bibliothèque nationale de France", Parigi</p>
+          <p>Foto di <strong>Mirco Danieli</strong>, Sistemista Applicativo</p>
+        </div>
+      </section>
+      <section data-bespoke-backdrop="elysees">
+        <h3>un panorama complesso</h3>
+        <div class="backdrop-info">
+          <p>Elysées La Défense, Parigi</p>
+          <p>Foto di <strong>Mirco Danieli</strong>, Sistemista Applicativo</p>
+        </div>
+      </section>
+      <section>
+        <div hidden class="bullet"></div>
+        <div class="bullet">
+          <h4>Paradigmi</h4>
+          <p>MVC — MVVP — Reactive — …</p>
+        </div>
+        <div class="bullet">
+          <h4>Frameworks</h4>
+          <p>Angular — Ember — React — …</p>
+        </div>
+        <div class="bullet">
+          <h4>Linguaggi</h4>
+          <p>JavaScript — TypeScript — CoffeeScript — …</p>
+        </div>
+      </section>
+      <section>
+        <div class="bullet">
+          <h4>Server Side Template Engines</h4>
+          <p>JSP — Freemarker — Velocity — …</p>
+        </div>
+        <div class="bullet">
+          <h4>Universal Template Engines</h4>
+          <p>Soy — Closure — React — …</p>
+        </div>
+      </section>
+      <section>
+        <div class="bullet">
+          <h4>CSS Pre-processors</h4>
+          <p>SASS/SCSS — Less — Stylus — …</p>
+        </div>
+        <div class="bullet">
+          <h4>CSS Processors</h4>
+          <p>Post-css — Auto-prefixer — …</p>
+        </div>
+      </section>
+      <section data-bespoke-backdrop="hungary-developed-identity low">
+        <h3>la scelta nelle nostre mani</h3>
+        <div class="backdrop-info">
+          <p>Szilárd Cseke, Sustainable Identities, 2015</p>
+          <p>Foto di <strong>Paolo Valeri</strong>, Direttore Tecnico</p>
+        </div>
+      </section>
+      <!--section
+      ul
+        li.no-bullet: strong Soy Templates
+        li.no-bullet: strong Google Closure Templates
+        li.no-bullet Freemarker
+        li.no-bullet Velocity
+        li.no-bullet JSP
+        li.no-bullet JSF
+        li.no-bullet …
+        
+      -->
+      <!--section
+      ul
+        li.no-bullet: strong Less
+        li.no-bullet: strong Stylus
+        li.no-bullet: strong Auto-prefixer
+        li.no-bullet: strong Post-css
+        li.no-bullet SASS (SCSS)
+        li.no-bullet …
+        
+      -->
+      <section>
+        <h3>I buoni</h3>
+        <h1>propositi</h1>
+        <h3>di Liferay 7</h3>
+      </section>
+      <section data-bespoke-backdrop="flower">
+        <h3>Buon proposito №1</h3>
+        <h1>Temi</h1>
+        <div class="backdrop-info">
+          <p>«Fioritura»</p>
+          <p>© <strong>Davide Abbatiello</strong>, Full-stack Engineer</p>
+        </div>
+      </section>
+      <section>
+        <div class="disclaimer">
+          <h3>Disclaimer</h3>
+          <p>Non-mandatory content ahead</p>
+        </div>
+      </section>
+      <section>
+        <h2>Developer Friction</h2>
+        <ul>
+          <li hidden></li>
+          <li><strong>Time-to-deploy</strong> per i temi non in linea con le altre piattaforme</li>
+          <li><strong>Build system</strong> non pensati per il front-end</li>
+          <li>Troppo poco <strong>controllo</strong> sulla <strong>pipeline</strong></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Nuovi tool</h2>
+        <div class="refs">
+          <p><a href="https://github.com/liferay/generator-liferay-theme">github.com/liferay/generator-liferay-theme</a></p>
+        </div>
+      </section>
+      <section data-bespoke-backdrop="gulp full"></section>
+      <section>
+        <h2>Gulp</h2>
+        <ul>
+          <li hidden></li>
+          <li>Un <em>Build System</em> come Ant, Maven o Gradle</li>
+          <li>Molto, molto veloce</li>
+          <li><em>Watch–ability oriented</em></li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="yeoman full"></section>
+      <section>
+        <h2>Yeoman</h2>
+        <p>(<code>yo</code>)</p>
+        <ul>
+          <li hidden></li>
+          <li>Un generatore di codice</li>
+          <li>Un <em>Kickstart System</em></li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="themelets full">
+        <div class="backdrop-info">
+          <p>Logo temporaneo</p>
+          <p>&copy; Creative Stall</p>
+        </div>
+      </section>
+      <section>
+        <h2>Themelets <span class="announcement"></span></h2>
+        <ul>
+          <li hidden></li>
+          <li>Porzioni di tema</li>
+          <li>
+            <del>Estensione</del> Composizione
+          </li>
+          <li>Distribuite attraverso <strong>npm</strong></li>
+        </ul>
+      </section>
+      <section>
+        <p class="themelet"><span class="file">FTL</span><span class="file">JS</span><span class="file">CSS</span></p>
+        <h2>⬇︎</h2>
+        <p>theme</p>
+      </section>
+      <section>
+        <h2>In sintesi</h2>
+      </section>
+      <section>
+        <h4>Crea un tema</h4>
+        <pre><code>yo liferay-theme</code></pre>
+        <div class="old">
+          <p><code>./create.sh ...</code></p>
+        </div>
+      </section>
+      <section>
+        <h4>Importa (!!) un tema</h4>
+        <pre><code>yo liferay-theme:import</code></pre>
+      </section>
+      <section>
+        <h4>Crea una nuova Themelet</h4>
+        <pre><code>yo liferay-theme:themelet</code></pre>
+      </section>
+      <section>
+        <h4>Esegui la build</h4>
+        <pre><code>gulp build</code></pre>
+        <div class="old">
+          <p><code>ant war</code></p>
+          <hr>
+          <p><code>mvn clean install</code></p>
+        </div>
+      </section>
+      <section>
+        <h4>Esegui build in tempo reale <span class="announcement"></span></h4>
+        <pre><code>gulp watch</code></pre>
+      </section>
+      <section>
+        <h4>Liferay 7</h4>
+        <h2>— e —</h2>
+        <h4>Liferay 6.2</h4>
+      </section>
+      <section data-bespoke-backdrop="fireworks">
+        <h3>Buon proposito №2</h3>
+        <h1>Dependencies</h1>
+        <div class="backdrop-info">
+          <p>«Light Painting Evolution»</p>
+          <p>© <strong>Davide Abbatiello</strong>, Full-stack Engineer</p>
+        </div>
+      </section>
+      <section>
+        <div class="disclaimer">
+          <h3>Disclaimer</h3>
+          <p>Very much in progress</p>
+        </div>
+      </section>
+      <section>
+        <h2><strong>YUI</strong> Loader</h2>
+        <ul>
+          <li hidden></li>
+          <li>YUI Gallery</li>
+          <li>pre-AMD-era</li>
+          <li>pre-CommonJS-era</li>
+          <li><strong>Deprecato…</strong></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Liferay<br><strong>Module Loader</strong><span class="announcement"></span></h2>
+        <div class="refs">
+          <p><a href="https://github.com/liferay/liferay-amd-loader">github.com/liferay/liferay-amd-loader</a></p>
+        </div>
+        <ul>
+          <li hidden></li>
+          <li>AMD (Asynchronous Module Definition)</li>
+          <li>Supporto per combo-loading</li>
+          <li>HTTP2-oriented</li>
+        </ul>
+      </section>
+      <section>
+        <h2>OSGi<span class="announcement"></span></h2>
+        <p>I <em>bundles</em> sono anche dei <em>module providers</em></p>
+        <pre><code class="language-properties">Bundle-Name: Metal Web
+Bundle-SymbolicName: …
+Bundle-Version: 1.0.0
+Include-Resource: bower.json
+JS-Submodules: true
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="fountain">
+        <h3>Buon proposito №3</h3>
+        <h1>Modularity</h1>
+        <div class="backdrop-info">
+          <p>Fontane, Nizza</p>
+          <p>© <strong>Davide Abbatiello</strong>, Full-stack Engineer</p>
+        </div>
+      </section>
+      <section>
+        <h4>Software architecture</h4>
+        <p>
+          Monolithic<br>
+          ⬇︎<br>
+          Extendible<br>
+          ⬇︎<br>
+          <strong>Modular</strong>
+          
+        </p>
+      </section>
+      <section>
+        <h4>Java Development</h4>
+        <p>
+          Edit/restart<br>
+          ⬇︎<br>
+          (Hot) Plugins<br>
+          ⬇︎<br>
+          <strong>OSGi Bundles</strong>
+          
+        </p>
+      </section>
+      <section>
+        <h4>Contracts</h4>
+        <p>
+          Source<br>
+          ⬇︎<br>
+          API surface<br>
+          ⬇︎<br>
+          <strong>Everything</strong>
+          
+        </p>
+      </section>
+      <section>
+        <h4>Examples on F/E</h4>
+        <p>Navigation Interaction<span class="liferay-6"></span><br>
+          ⬇︎<br>
+          Alloy Editor<span class="liferay-6"></span><br>
+          ⬇︎<br>
+          <strong>Map Provider</strong><span class="liferay-7"></span>
+          
+        </p>
+      </section>
+      <section class="keep">
+        <p>Asset Publisher</p>
+        <div class="contract">
+          <p>Map Provider</p>
+          <div class="contract impl">
+            <p>Google Maps</p>
+            <div class="contract">
+              <p>Map Provider Plugins</p>
+              <div class="contract impl">
+                <p>Route Plugin</p>
+              </div>
+              <div class="contract impl">
+                <p>PoI Plugin</p>
+              </div>
+              <div class="contract impl">
+                <p>···</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="keep">
+        <p>Asset Publisher</p>
+        <div class="contract">
+          <p>Map Provider</p>
+          <div class="contract impl">
+            <p>Google Maps</p>
+            <div class="contract">
+              <p>Map Provider Plugins</p>
+              <div class="contract impl">
+                <p>Route Plugin</p>
+              </div>
+              <div class="contract impl">
+                <p>PoI Plugin</p>
+              </div>
+              <div class="contract impl alt">
+                <p>Area Plugin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="keep">
+        <p>Asset Publisher</p>
+        <div class="contract">
+          <p>Map Provider</p>
+          <div class="contract impl alt2">
+            <p>Open Street Maps</p>
+            <div class="contract">
+              <p>Map Provider Plugins</p>
+              <div class="contract impl">
+                <p>Route Plugin</p>
+              </div>
+              <div class="contract impl">
+                <p>PoI Plugin</p>
+              </div>
+              <div class="contract impl alt">
+                <p>Area Plugin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="keep">
+        <p>Asset Publisher</p>
+        <div class="contract">
+          <p>Map Provider</p>
+          <div class="contract impl alt2">
+            <p>Open Street Maps</p>
+            <div class="contract">
+              <p>Map Provider Plugins</p>
+              <div class="contract impl del">
+                <p>Route Plugin</p>
+              </div>
+              <div class="contract impl">
+                <p>PoI Plugin</p>
+              </div>
+              <div class="contract impl alt">
+                <p>Area Plugin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="keep last-keep">
+        <p>Asset Publisher</p>
+        <div class="contract">
+          <p>Map Provider</p>
+          <div class="contract impl alt2">
+            <p>Open Street Maps</p>
+            <div class="contract">
+              <p>Map Provider Plugins</p>
+              <div class="contract impl alt2">
+                <p>Alternative Plugin</p>
+              </div>
+              <div class="contract impl">
+                <p>PoI Plugin</p>
+              </div>
+              <div class="contract impl alt">
+                <p>Area Plugin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--section.keep
+      p Blogs Entry
+      .contract
+        p Social Share Intents
+        .contract.impl: p Facebook
+        .contract.impl: p Twitter
+        .contract.hide: p ···
+        
+      -->
+      <!--section.keep.last-keep
+      p Blogs Entry
+      .contract
+        p Social Share Intents
+        .contract.impl: p Facebook
+        .contract.impl: p Twitter
+        .contract.impl.alt: p LinkedIn
+        
+      -->
+      <section>
+        <h4>Design-time Dependencies</h4>
+        <h2>VS</h2>
+        <h4>Runtime Modularity</h4>
+      </section>
+      <!--section
+      p My Consumer
+      .contract.impl
+        p My Module
+        .contract
+          .contract.impl: p My Module Plugin
+          .contract.impl: p ···
+          
+      -->
+      <!--section
+      pre: code.language-javascript.
+        {
+          name: 'my-consumer',
+          dependencies: {
+            'my-module': '*',
+            'my-module-plugin': '*'
+          }
+        }
+        
+      -->
+      <!--section
+      pre: code.language-javascript.
+        {
+          name: 'my-module',
+          version: '1.0.0'
+        }
+        
+      -->
+      <!--section
+      pre: code.language-javascript.
+        {
+          name: 'my-module-plugin',
+          peerDependencies: {
+            'my-module': '1.x'
+          }
+        }
+        
+      -->
+      <!--section
+      h4 Risoluzione ‘alla Node’
+      ul
+        li.no-bullet
+          span <code>"consumer"</code> dipende da
+          ul
+            li.no-bullet
+              span <code>"my-module"</code>
+            li.no-bullet
+              span <code>"my-module-plugin"</code>
+              
+      -->
+      <section data-bespoke-backdrop="eurofighter">
+        <h3>Buon proposito №4</h3>
+        <h1>ES2015</h1>
+        <div class="backdrop-info">
+          <p>Eurofighter Typhoon Airshow, Parma, 2013</p>
+          <p>© <strong>Davide Abbatiello</strong>, Full-stack Engineer</p>
+        </div>
+      </section>
+      <section>
+        <h4>Build-time compiling</h4>
+        <ul>
+          <li hidden></li>
+          <li>Utilizzeremo Babel.js</li>
+          <li>Supporto per le SourceMaps</li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="babel full"></section>
+      <section>
+        <h4>Il che significa…</h4>
+        <ul>
+          <li hidden></li>
+          <li>Node.js dietro le quinte</li>
+          <li>E quindi possiamo usare…
+            <ul>
+              <li>ES2016!</li>
+              <li>CoffeeScript!</li>
+              <li>TypeScript!</li>
+              <li>Flow!!</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Enterprise</h2>
+        <ul>
+          <li>Continuous Integration?</li>
+          <li>Continuous Deployment?</li>
+          <li>Node in produzione?</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Liferay</h2>
+        <p><img src="/images/red-heart.png" width="64" height="64"></p>
+        <h2>Front-end</h2>
+      </section>
+      <section>
+        <p><em>fin</em></p>
+        <div class="old">
+          <h4>Crediti</h4>
+          <p>
+            Mirco Danieli<br>
+            Paolo Valeri<br>
+            Davide Abbatiello
+            
+          </p>
+        </div>
+      </section>
+      <section>
+        <p><img src="/images/smc.png" style="width:50px;margin-bottom:2em"></p>
+        <p><img src="/images/award.png" style="width:100%"></p>
+      </section>
+      <section>
+        <h3>Liferay 7 — Front-end Development</h3>
+        <hr>
+        <h2>Q&amp;A</h2>
+        <hr>
+        <h4>Pier Paolo Ramon</h4>
+        <p><small>Twitter <strong>@_pier</strong></small></p>
+        <p><small>GitHub <strong>@yuchi</strong></small></p>
+      </section>
+      <!--section(data-bespoke-backdrop="frameworks repeat")
+      h2 I. Frameworks
+      
+      -->
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
